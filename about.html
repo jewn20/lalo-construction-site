@@ -118,7 +118,15 @@
        title="Chat with us on Messenger">
        <img src="images/messenger-icon.png" alt="Messenger Chat">
     </a>
-    <!-- Messenger Chat Plugin Code -->
+    <!-- Fallback Messenger Button -->
+    <a href="https://m.me/296711914085772" 
+       class="messenger-button" 
+       target="_blank" 
+       title="Chat with us on Messenger">
+       <img src="images/messenger-icon.png" alt="Messenger Chat">
+    </a>
+
+    <!-- Messenger Chat Plugin -->
     <div id="fb-root"></div>
     <div id="fb-customer-chat" class="fb-customerchat"
         page_id="296711914085772"
@@ -133,9 +141,7 @@
         xfbml: true,
         version: 'v18.0'
         });
-        // Log success
         console.log('Messenger SDK initialized successfully.');
-        // Hide fallback button if plugin loads
         if (document.querySelector('.fb-customerchat')) {
             const fallbackButton = document.querySelector('.messenger-button');
         if (fallbackButton) {
@@ -153,7 +159,7 @@
         };
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    </script>
+    </script> 'script', 'facebook-jssdk'));
     <script src="script.js"></script>
 </body>
 </html>
