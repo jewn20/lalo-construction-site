@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LALO CONSTRUCTION offers residential, commercial, and renovation services in Sariaya, Quezon. Contact us for quality construction solutions.">
     <meta name="keywords" content="construction, LALO CONSTRUCTION, Sariaya, Quezon, residential, commercial, renovations">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="LALO CONSTRUCTION - Building More Than Structures">
+    <meta property="og:description" content="LALO CONSTRUCTION offers residential, commercial, and renovation services in Sariaya, Quezon. Contact us for quality construction solutions.">
+    <meta property="og:image" content="https://jewn20.github.io/lalo-construction-site/images/lalo-logo.png">
+    <meta property="og:url" content="https://jewn20.github.io/lalo-construction-site/">
     <title>LALO CONSTRUCTION - Building More Than Structures</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -174,37 +179,37 @@
     <!-- Messenger Chat Plugin -->
     <div id="fb-root"></div>
     <div id="fb-customer-chat" class="fb-customerchat"
-        page_id="296711914085772"
-        attribution="biz_inbox"
-        theme_color="#1A2A6C"
-        logged_in_greeting="Welcome to LALO CONSTRUCTION! How can we help with your project?"
-        logged_out_greeting="Welcome to LALO CONSTRUCTION! Log in to chat about your project!">
+         page_id="296711914085772"
+         theme_color="#18277c"
+         logged_in_greeting="Welcome to LALO CONSTRUCTION! How can we help with your project?"
+         logged_out_greeting="Welcome to LALO CONSTRUCTION! Log in to chat about your project!"
+         minimized="false">
     </div>
     <script>
-    window.fbAsyncInit = function() {
+      window.fbAsyncInit = function() {
         FB.init({
-        xfbml: true,
-        version: 'v18.0'
+          xfbml: true,
+          version: 'v18.0'
         });
         console.log('Messenger SDK initialized successfully.');
         if (document.querySelector('.fb-customerchat')) {
-            const fallbackButton = document.querySelector('.messenger-button');
-        if (fallbackButton) {
+          const fallbackButton = document.querySelector('.messenger-button');
+          if (fallbackButton) {
             fallbackButton.style.display = 'none';
+          }
         }
-        }
-    };
-    (function(d, s, id) {
+      };
+      (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         js.onerror = function() {
-        console.error('Failed to load Messenger SDK. Check network or ad blockers.');
+          console.error('Failed to load Messenger SDK. Check network or ad blockers.');
         };
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script> 'script', 'facebook-jssdk'));
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
