@@ -174,41 +174,58 @@
        title="Chat with us on Messenger">
        <img src="images/messenger-icon.png" alt="Messenger Chat">
     </a>
-    <!-- Messenger Chat Plugin -->
-    <div id="fb-root"></div>
-    <div id="fb-customer-chat" class="fb-customerchat"
-         page_id="296711914085772"
-         theme_color="#18277c"
-         logged_in_greeting="Welcome to LALO CONSTRUCTION! How can we help with your project?"
-         logged_out_greeting="Welcome to LALO CONSTRUCTION! Log in to chat about your project!"
-         minimized="false">
-    </div>
-
-    <script>
-      window.fbAsyncInit = function() {
-        try {
-          FB.init({
-            xfbml: true,
-            version: 'v18.0'
-          });
-          console.log('Messenger SDK initialized successfully.');
-        } catch (error) {
-           console.error('Error initializing FB SDK:', error);
-        }
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        js.onerror = function() {
-          console.error('Failed to load Messenger SDK. Check network, ad blockers, or CSP.');
-          // Optionally display a manual contact link here if SDK fails
-        };
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script src="script.js"></script>
-</body>
-</html>
+        <!-- Messenger Chat Plugin -->
+        <div id="fb-root"></div>
+        <div id="fb-customer-chat" class="fb-customerchat"
+             page_id="296711914085772"  <!-- VERIFY THIS PAGE ID IS CORRECT -->
+             theme_color="#18277c"
+             logged_in_greeting="Welcome to LALO CONSTRUCTION! How can we help with your project?"
+             logged_out_greeting="Welcome to LALO CONSTRUCTION! Log in to chat about your project!"
+             minimized="false">
+        </div>
+    
+        <script>
+          // This function will be called after the SDK loads
+          window.fbAsyncInit = function() {
+            try {
+              FB.init({
+                // No appId/cookie needed for customer chat via page_id
+                xfbml: true,          // Crucial: Parse XFBML tags (like the chat plugin)
+                version: 'v18.0'      // Use a recent version
+              });
+              console.log('Facebook SDK Initialized Successfully.');
+    
+              // You could potentially hide a fallback link here if needed,
+              // but the onerror below is often better for failure cases.
+    
+            } catch (error) {
+                console.error('Error initializing FB SDK:', error);
+            }
+          };
+    
+          // Asynchronously load the SDK
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; // Don't load script twice
+            js = d.createElement(s); js.id = id;
+            // Load the main SDK - it handles customer chat via xfbml:true
+            // Use your desired locale e.g., en_US
+            js.src = 'https://connect.facebook.net/en_US/sdk.js';
+            js.onerror = function() {
+              // THIS IS THE ERROR YOU ARE SEEING IN YOUR CONSOLE
+              console.error('Failed to load Facebook SDK. Check network, ad blockers, or CSP.');
+              // You could display a fallback contact method here
+              // e.g., document.getElementById('messenger-fallback').style.display = 'block';
+            };
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        </script>
+    
+        <!-- Your existing script.js for menu, year, form -->
+        <script src="script.js"></script>
+    
+        <!-- Optional Fallback Link (initially hidden via CSS or style="display: none;") -->
+        <!-- <a id="messenger-fallback" href="https://m.me/YOUR_PAGE_ID" target="_blank" style="display: none;">Chat with us on Messenger</a> -->
+    
+    </body>
+    </html>
