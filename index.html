@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LALO CONSTRUCTION offers residential, commercial, and renovation services in Sariaya, Quezon. Contact us for quality construction solutions.">
+    <meta name="keywords" content="construction, LALO CONSTRUCTION, Sariaya, Quezon, residential, commercial, renovations">
     <title>LALO CONSTRUCTION - Building More Than Structures</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Add Favicon link here if you have one -->
 </head>
 <body>
-
     <header>
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html"><img src="images/lalo-logo.png" alt="LALO CONSTRUCTION Logo"></a>
             </div>
-            <nav>
+            <button class="menu-toggle">☰</button>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -28,7 +29,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
@@ -40,7 +40,6 @@
             </div>
         </section>
 
-        <!-- About Snippet -->
         <section class="about-snippet">
             <div class="container content-grid">
                 <div class="text-content">
@@ -49,19 +48,16 @@
                     <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
                 </div>
                 <div class="image-content">
-                    <!-- Replace with an actual image -->
-                    <img src="images/foundation.png" alt="Construction foundation">
+                    <img src="images/foundation.png" alt="Construction foundation" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <!-- Services Overview -->
         <section class="services-overview">
             <div class="container">
                 <h2>Our Expertise</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <!-- Add icon later if desired -->
                         <h3>Residential Construction</h3>
                         <p>Building dream homes with care, precision, and lasting quality.</p>
                     </div>
@@ -70,31 +66,29 @@
                         <p>Creating functional, impactful spaces for businesses and communities.</p>
                     </div>
                     <div class="service-card">
-                        <h3>Project Management</h3>
-                        <p>Ensuring seamless execution from initial concept to final completion.</p>
-                    </div>
-                     <div class="service-card">
                         <h3>Renovations</h3>
                         <p>Transforming existing structures with quality craftsmanship.</p>
                     </div>
+                    <div class="service-card">
+                        <h3>Project Management</h3>
+                        <p>Ensuring seamless execution from concept to completion.</p>
+                    </div>
                 </div>
                 <div class="text-center">
-                     <a href="services.html" class="btn btn-primary">Explore Our Services</a>
+                    <a href="services.html" class="btn btn-primary">Explore Our Services</a>
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Us -->
-         <section class="why-choose-us">
+        <section class="why-choose-us">
             <div class="container content-grid">
-                 <div class="image-content">
-                    <!-- Replace with an actual image -->
-                    <img src="images/quality.jpg" alt="Construction quality detail">
+                <div class="image-content">
+                    <img src="images/quality.jpg" alt="Construction quality detail" loading="lazy">
                 </div>
                 <div class="text-content">
                     <h2>Driven by Passion. Defined by Impact.</h2>
-                    <p>We don't just meet expectations – we shatter them. Our resilience, visionary leadership, and dedicated team establish benchmarks for quality and innovation in the construction industry.</p>
-                     <ul class="values-list">
+                    <p>We don’t just meet expectations—we shatter them. Our resilience, visionary leadership, and dedicated team establish benchmarks for quality and innovation.</p>
+                    <ul class="values-list">
                         <li>Unwavering Consistency</li>
                         <li>Tireless Dedication</li>
                         <li>Uncompromising Quality</li>
@@ -104,39 +98,44 @@
             </div>
         </section>
 
-         <!-- Portfolio Showcase -->
         <section class="portfolio-showcase">
             <div class="container">
                 <h2>Featured Projects</h2>
                 <div class="projects-grid">
                     <div class="project-item">
-                        <img src="https://via.placeholder.com/400x300/cccccc/888888?text=Project+1" alt="Project 1">
-                        <h4>Commercial Build - Sariaya</h4>
+                        <img src="images/mechanical-dryer.jpg" alt="Mechanical Dryer Warehouse" loading="lazy">
+                        <h4>Mechanical Dryer Warehouse - Mindoro</h4>
                     </div>
                     <div class="project-item">
-                        <img src="https://via.placeholder.com/400x300/cccccc/888888?text=Project+2" alt="Project 2">
-                        <h4>Residential Home - Quezon</h4>
+                        <img src="images/classroom-agoncillo.jpg" alt="Classroom Agoncillo" loading="lazy">
+                        <h4>2-Storey Classroom - Agoncillo</h4>
                     </div>
                     <div class="project-item">
-                        <img src="https://via.placeholder.com/400x300/cccccc/888888?text=Project+3" alt="Project 3">
-                        <h4>Renovation Project - Lucena</h4>
+                        <img src="images/feedmill-narra.jpg" alt="Feedmill Plant Narra" loading="lazy">
+                        <h4>Feedmill Plant - Narra, Palawan</h4>
                     </div>
                 </div>
-                 <div class="text-center">
+                <div class="text-center">
                     <a href="projects.html" class="btn btn-primary">See More Projects</a>
-                 </div>
+                </div>
             </div>
         </section>
 
-        <!-- Bottom CTA -->
-        <section class="bottom-cta">
+        <section class="certifications-snippet">
             <div class="container text-center">
-                <h2>Let's Build Your Vision Together</h2>
-                <p>Ready to start your next construction project? Contact LALO CONSTRUCTION today to discuss your ideas and aspirations.</p>
+                <h2>Licensed & Trusted</h2>
+                <p>LALO CONSTRUCTION is fully compliant with DTI, DOLE, SSS, Pag-IBIG, PhilHealth, and BIR regulations, ensuring professionalism in every project.</p>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </section>
+
+        <section class="bottom-cta dark-bg">
+            <div class="container text-center">
+                <h2>Let’s Build Your Vision Together</h2>
+                <p>Ready to start your next construction project? Contact LALO CONSTRUCTION today to discuss your ideas.</p>
                 <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -148,7 +147,7 @@
                         <a href="tel:09152299978">0915-229-9978</a> / <a href="tel:09195140633">0919-514-0633</a> <br>
                         <a href="mailto:laloconstructionservices@gmail.com">laloconstructionservices@gmail.com</a>
                     </p>
-                     <p>DPL Compound, Sitio Tribu, Bgy. Canda, Sariaya, Quezon</p>
+                    <p>DPL Compound, Sitio Tribu, Bgy. Canda, Sariaya, Quezon</p>
                 </div>
                 <div class="footer-nav">
                     <ul>
@@ -163,10 +162,31 @@
         </div>
     </footer>
 
+    <!-- Messenger Chat Plugin -->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"
+         page_id="YOUR_PAGE_ID"
+         attribution="setup_tool"
+         theme_color="#18277c">
+    </div>
     <script>
-        // Simple script to update year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "YOUR_PAGE_ID");
+      chatbox.setAttribute("attribution", "biz_inbox");
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v18.0'
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

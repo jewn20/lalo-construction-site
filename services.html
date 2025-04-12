@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore LALO CONSTRUCTION’s services: residential, commercial, renovations, and project management in Sariaya, Quezon.">
+    <meta name="keywords" content="LALO CONSTRUCTION, services, residential, commercial, renovations, project management, Sariaya, Quezon">
     <title>Our Services - LALO CONSTRUCTION</title>
     <link rel="stylesheet" href="style.css">
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
-        <!-- ... (Same Header as index.html) ... -->
-         <div class="container header-content">
+        <div class="container header-content">
             <div class="logo">
                 <a href="index.html"><img src="images/lalo-logo.png" alt="LALO CONSTRUCTION Logo"></a>
             </div>
-            <nav>
+            <button class="menu-toggle">☰</button>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -37,13 +38,13 @@
 
         <section class="services-list">
             <div class="container">
-                <p class="intro-text">At LALO CONSTRUCTION, we offer comprehensive construction solutions tailored to your specific vision. Our commitment to strength, precision, and quality ensures exceptional results for every project, large or small.</p>
+                <p class="intro-text">At LALO CONSTRUCTION, we offer comprehensive construction solutions tailored to your vision. Our commitment to strength, precision, and quality ensures exceptional results for every project.</p>
 
                 <div class="service-item">
-                    <img src="images/residential.jpg" alt="Residential Construction Service">
+                    <img src="images/residential.jpg" alt="Residential Construction Service" loading="lazy">
                     <div class="service-description">
                         <h2>Residential Construction</h2>
-                        <p>We specialize in building high-quality homes that reflect your dreams and lifestyle. From custom builds to housing developments, we focus on durability, aesthetics, and attention to detail, ensuring your house truly feels like home.</p>
+                        <p>We build high-quality homes that reflect your dreams and lifestyle, focusing on durability, aesthetics, and attention to detail.</p>
                         <ul>
                             <li>Custom Home Building</li>
                             <li>Multi-unit Housing</li>
@@ -54,11 +55,11 @@
                 </div>
 
                 <div class="service-item">
-                     <img src="images/commercial.webp" alt="Commercial Construction Service">
-                     <div class="service-description">
+                    <img src="images/commercial.webp" alt="Commercial Construction Service" loading="lazy">
+                    <div class="service-description">
                         <h2>Commercial Projects</h2>
-                        <p>LALO CONSTRUCTION builds functional and impactful commercial spaces. Whether it's an office building, retail space, or industrial facility, we deliver projects on time and within budget, focusing on structural integrity and purpose-driven design.</p>
-                         <ul>
+                        <p>We deliver functional commercial spaces—offices, retail, or industrial—on time and within budget, with purpose-driven design.</p>
+                        <ul>
                             <li>Office Buildings</li>
                             <li>Retail & Hospitality</li>
                             <li>Warehouses & Industrial</li>
@@ -67,12 +68,12 @@
                     </div>
                 </div>
 
-                 <div class="service-item">
-                    <img src="images/renovation.jpeg" alt="Renovation Service">
+                <div class="service-item">
+                    <img src="images/renovation.jpeg" alt="Renovation Service" loading="lazy">
                     <div class="service-description">
                         <h2>Renovations & Remodeling</h2>
-                        <p>Transform your existing space with our expert renovation services. We breathe new life into homes and commercial properties, enhancing functionality and value while maintaining structural integrity and high-quality craftsmanship.</p>
-                         <ul>
+                        <p>Transform your space with our expert renovations, enhancing functionality and value while maintaining quality craftsmanship.</p>
+                        <ul>
                             <li>Home Additions & Extensions</li>
                             <li>Kitchen & Bathroom Remodels</li>
                             <li>Commercial Space Fit-outs</li>
@@ -81,12 +82,12 @@
                     </div>
                 </div>
 
-                 <div class="service-item">
-                    <img src="images/management.png" alt="Project Management Service">
+                <div class="service-item">
+                    <img src="images/management.png" alt="Project Management Service" loading="lazy">
                     <div class="service-description">
                         <h2>Project Management</h2>
-                        <p>Our experienced team provides comprehensive project management services, overseeing every phase from planning and design coordination to construction execution and quality control. We ensure efficiency, communication, and adherence to timelines and budgets.</p>
-                         <ul>
+                        <p>Our team oversees every phase—planning, design, construction, and quality control—ensuring efficiency and adherence to timelines.</p>
+                        <ul>
                             <li>End-to-End Project Oversight</li>
                             <li>Budgeting & Scheduling</li>
                             <li>Quality Assurance</li>
@@ -94,11 +95,9 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </section>
 
-         <!-- Bottom CTA -->
         <section class="bottom-cta dark-bg">
             <div class="container text-center">
                 <h2>Ready to Discuss Your Project?</h2>
@@ -106,20 +105,18 @@
                 <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
             </div>
         </section>
-
     </main>
 
     <footer>
-        <!-- ... (Same Footer as index.html) ... -->
-         <div class="container">
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
                     <p>© <span id="year"></span> LALO CONSTRUCTION. All Rights Reserved.</p>
-                     <p>
+                    <p>
                         <a href="tel:09152299978">0915-229-9978</a> / <a href="tel:09195140633">0919-514-0633</a> <br>
                         <a href="mailto:laloconstructionservices@gmail.com">laloconstructionservices@gmail.com</a>
                     </p>
-                     <p>DPL Compound, Sitio Tribu, Bgy. Canda, Sariaya, Quezon</p>
+                    <p>DPL Compound, Sitio Tribu, Bgy. Canda, Sariaya, Quezon</p>
                 </div>
                 <div class="footer-nav">
                     <ul>
@@ -133,6 +130,32 @@
             </div>
         </div>
     </footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <!-- Messenger Chat Plugin -->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"
+         page_id="YOUR_PAGE_ID"
+         attribution="setup_tool"
+         theme_color="#18277c">
+    </div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "YOUR_PAGE_ID");
+      chatbox.setAttribute("attribution", "biz_inbox");
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v18.0'
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
