@@ -108,31 +108,49 @@
             </div>
         </div>
     </footer>
+    <!-- Fallback Messenger Button -->
+    <a href="https://m.me/296711914085772" 
+       class="messenger-button" 
+       target="_blank" 
+       title="Chat with us on Messenger">
+       <img src="images/messenger-icon.png" alt="Messenger Chat">
+    </a>
 
-    <!-- Messenger Chat Plugin -->
+    <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
     <div id="fb-customer-chat" class="fb-customerchat"
-         page_id="296711914085772"
-         attribution="setup_tool"
-         theme_color="#18277c">
+        page_id="296711914085772"
+        attribution="setup_tool"
+        theme_color="#18277c"
+        logged_in_greeting="Welcome to LALO CONSTRUCTION! How can we help with your project?"
+        logged_out_greeting="Welcome to LALO CONSTRUCTION! Log in to chat about your project!">
     </div>
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "296711914085772");
-      chatbox.setAttribute("attribution", "biz_inbox");
-      window.fbAsyncInit = function() {
+    window.fbAsyncInit = function() {
         FB.init({
-          xfbml            : true,
-          version          : 'v18.0'
+        xfbml: true,
+        version: 'v18.0'
         });
-      };
-      (function(d, s, id) {
+        // Log success
+        console.log('Messenger SDK initialized successfully.');
+        // Hide fallback button if plugin loads
+        if (document.querySelector('.fb-customerchat')) {
+            const fallbackButton = document.querySelector('.messenger-button');
+        if (fallbackButton) {
+            fallbackButton.style.display = 'none';
+        }
+        }
+    };
+    (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        js.onerror = function() {
+        console.error('Failed to load Messenger SDK. Check network or ad blockers.');
+        };
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+    }(document, 'script', 'facebook-jssdk'));
     </script>
     <script src="script.js"></script>
 </body>
