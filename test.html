@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FB Chat Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Test Page</h1>
+    <p>This page only contains the Messenger plugin.</p>
+
+    <!-- Messenger Chat Plugin -->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"
+         page_id="296711914085772"
+         theme_color="#18277c"
+         logged_in_greeting="Test Greeting In"
+         logged_out_greeting="Test Greeting Out"
+         minimized="true"> <!-- Start minimized for this test -->
+    </div>
+
+    <script>
+      window.fbAsyncInit = function() {
+        try {
+          FB.init({
+            xfbml: true,
+            version: 'v18.0'
+          });
+          console.log('Minimal Test: FB SDK Initialized.');
+        } catch (error) {
+            console.error('Minimal Test: Error initializing FB SDK:', error);
+        }
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js';
+        js.onerror = function() {
+          console.error('Minimal Test: Failed to load FB SDK.');
+        };
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+</html>
