@@ -167,7 +167,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Fallback Messenger Button -->
     <a href="https://m.me/296711914085772" 
        class="messenger-button" 
@@ -175,7 +174,6 @@
        title="Chat with us on Messenger">
        <img src="images/messenger-icon.png" alt="Messenger Chat">
     </a>
-
     <!-- Messenger Chat Plugin -->
     <div id="fb-root"></div>
     <div id="fb-customer-chat" class="fb-customerchat"
@@ -185,27 +183,28 @@
          logged_out_greeting="Welcome to LALO CONSTRUCTION! Log in to chat about your project!"
          minimized="false">
     </div>
+
     <script>
       window.fbAsyncInit = function() {
-        FB.init({
-          xfbml: true,
-          version: 'v18.0'
-        });
-        console.log('Messenger SDK initialized successfully.');
-        if (document.querySelector('.fb-customerchat')) {
-          const fallbackButton = document.querySelector('.messenger-button');
-          if (fallbackButton) {
-            fallbackButton.style.display = 'none';
-          }
+        try {
+          FB.init({
+            xfbml: true,
+            version: 'v18.0'
+          });
+          console.log('Messenger SDK initialized successfully.');
+        } catch (error) {
+           console.error('Error initializing FB SDK:', error);
         }
       };
+
       (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         js.onerror = function() {
-          console.error('Failed to load Messenger SDK. Check network or ad blockers.');
+          console.error('Failed to load Messenger SDK. Check network, ad blockers, or CSP.');
+          // Optionally display a manual contact link here if SDK fails
         };
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
