@@ -514,6 +514,12 @@ footer {
 }
 
 /* Messenger Chat Plugin */
+#fb-customer-chat .fb_iframe_widget iframe {
+    background-color: #1A2A6C !important;
+}
+#fb-customer-chat .fb_dialog {
+    background-color: #1A2A6C !important;
+}
 #fb-customer-chat {
     z-index: 1000 !important;
     bottom: 90px !important;
